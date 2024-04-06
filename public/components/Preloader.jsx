@@ -7,10 +7,10 @@ export default function Preloader() {
                 <div className="h-[135px] relative">
                     <div className="preloader">
                         <div className="preloader nested1">
-                            <div class="preloader nested2">
-                                <div class="preloader nested3">
-                                    <div class="preloader nested4">
-                                        <div class="preloader nested5">
+                            <div className="preloader nested2">
+                                <div className="preloader nested3">
+                                    <div className="preloader nested4">
+                                        <div className="preloader nested5">
                                         </div>
                                     </div>
                                 </div>
