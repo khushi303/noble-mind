@@ -1,9 +1,9 @@
 import React from 'react'
 import { Stars } from './Icons'
 import SwiperSec from './SwipeSliderSec'
-import Sliderimg from '../assets/images/png/slider-img.png'
+import Sliderimg from '../assets/images/webp/slider-img.webp'
 import Image from 'next/image'
-import purtriangle from '../assets/images/png/purtriangle.png'
+import purtriangle from '../assets/images/webp/purtriangle.webp'
 
 const Choose = () => {
     return (

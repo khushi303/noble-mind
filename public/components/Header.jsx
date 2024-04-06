@@ -4,7 +4,7 @@ import { Logo, Stars } from "./Icons";
 import { useState, useEffect } from 'react';
 import { CommonBtn } from "./CommonBtn";
 import Image from "next/image";
-import hero from '../assets/images/png/hero.png'
+import hero from '../assets/images/webp/hero.webp'
 
 export default function Header() {
     const [nav, setNav] = useState(false)

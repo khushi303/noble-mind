@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
-import innoveimg from '../assets/images/png/innovationimg.png'
+import innoveimg from '../assets/images/webp/innovationimg.webp'
 import { Stars } from './Icons'
 import { CommonBtn } from './CommonBtn'
-import purtriangle from '../assets/images/png/purtriangle.png'
+import purtriangle from '../assets/images/webp/purtriangle.webp'
 
 const About = () => {
     return (

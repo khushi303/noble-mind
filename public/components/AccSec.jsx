@@ -1,5 +1,5 @@
 import AccordianData from './AccordianData';
-import purtriangle from '../assets/images/png/purtriangle.png'
+import purtriangle from '../assets/images/webp/purtriangle.webp'
 import Image from 'next/image';
 
 export default function AccSec() {
