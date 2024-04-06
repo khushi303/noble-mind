@@ -15,7 +15,7 @@ export default function DefaultAccordion() {
 
     return (
         <>
-            <div className="flex flex-col w-full gap-[18px] max-w-[740px] mx-auto">
+            <div data-aos="fade-down" className="flex flex-col w-full gap-[18px] max-w-[740px] mx-auto">
                 <Accordion open={open === 1} className={`${open === 1 ? "border border-b-[6px] border-[#A854E9]" : "border-[#A854E933] border"}  border-solid  rounded-md sm:px-6 sm:py-[22.67px] p-4 shadow-[0px_4px_32px_0px_#00000014]`}>
                     <AccordionHeader onClick={() => handleOpen(1)} className="p-0 flex acc1 justify-between w-full text-start border-none"><p className="ff_outfit text-[16px] font-semibold text-[#000000] leading-[150%] ">What is Artificial Intelligence (AI)?</p> <div className={`${open === 1 ? "rotate-180" : ""} transition-all ease-linear duration-200`}><AccBtn /></div></AccordionHeader>
                     <AccordionBody className="p-0 mt-3 text-[16px] font-normal leading-[150%] opacity-70 text-[#000000]">

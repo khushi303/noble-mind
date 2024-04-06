@@ -12,11 +12,11 @@ export default function App({ Component, pageProps }) {
     setLoading(false);
     setTimeout(() => {
       setLoading(true);
-    }, 4000);
+    }, 3000);
   }, []);
   useEffect(() => {
     AOS.init({
-      duration: 1400,
+      duration: 1100,
       once: true,
     })
   }, [])
