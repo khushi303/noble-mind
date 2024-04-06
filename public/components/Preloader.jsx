@@ -18,9 +18,9 @@ export default function Preloader() {
                         </div>
 
                     </div>
-                    <div className="animate_pulse">
+                    {/* <div className="animate_pulse">
                         <Logo />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

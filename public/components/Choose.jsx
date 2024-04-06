@@ -1,9 +1,9 @@
 import React from 'react'
 import { Stars } from './Icons'
-import SwiperSec from './SwipeSliderSec'
 import Sliderimg from '../assets/images/webp/slider-img.webp'
 import Image from 'next/image'
 import purtriangle from '../assets/images/webp/purtriangle.webp'
+import SliderData from './SliderData'
 
 const Choose = () => {
     return (
@@ -14,10 +14,10 @@ const Choose = () => {
                     <p className="text-[16px] font-normal leading-[150%] text-[#131200]">Why Choose Us</p>
                 </div>
                 <h3 data-aos="fade-right" className='sm:text-[48px] text-[30px] leading-[120%] font-light text-black ff_outfit text-center max-w-[521px] mx-auto lg:mb-[52px] mb-[26px]'>Driving Innovation & <span className='font-semibold'>Transforming Industries</span></h3>
-                <SwiperSec />
+                <SliderData />
                 <div data-aos="zoom-in-up">
                     <div id='service' className='mt-[60px] overflow-hidden rounded-3xl relative z-10'>
-                        <Image src={Sliderimg} alt="Sliderimg" className='md:h-[527px] sm:h-[400px] h-[350px] w-full object-cover rounded-3xl hover:scale-105 transition-all duration-300 ease-linear' />
+                        <Image src={Sliderimg} alt="Sliderimg" className='md:h-[527px] sm:h-[400px] h-[350px] w-full object-cover rounded-3xl' />
                     </div>
                 </div>
             </div>

@@ -8,11 +8,13 @@ export default function Contacts() {
         name: "",
         lastname: "",
         email: "",
+        message: "",
     });
     const [formErrors, setFormErrors] = useState({
         name: "",
         lastname: "",
         email: "",
+        message: "",
     });
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
     const handleChange = (e) => {
@@ -27,37 +29,44 @@ export default function Contacts() {
         const regex = {
             name: /^[a-zA-Z\s]+$/,
             lastname: /^[a-zA-Z\s]+$/,
-            email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
+            email: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,
         };
         const errors = {};
         if (!regex.name.test(formData.name)) {
-            errors.name = "Name is invalid.";
+            errors.name = "Name is invalid...";
         }
         if (!regex.lastname.test(formData.lastname)) {
-            errors.lastname = "lastName is invalid.";
+            errors.lastname = "lastName is invalid...";
         }
         if (!regex.email.test(formData.email)) {
-            errors.email = "email is invalid.";
+            errors.email = "email is invalid...";
         }
-        if (!regex.email.test(formData.email)) {
-            errors.email = "email is invalid.";
+        if (!formData.message || formData.message.trim() === "") {
+            errors.message = "Message is required...";
         }
         setFormErrors(errors);
         if (Object.keys(errors).length === 0) {
             setShowSuccessPopup(true);
         }
     };
+    if (showSuccessPopup === true) {
+        document.body.classList.add("overflow-hidden")
+    } else {
+        document.body.classList.remove("overflow-hidden")
+    }
     const handlePopupClose = () => {
         setShowSuccessPopup(false);
         setFormData({
             name: "",
             lastname: "",
             email: "",
+            message: "",
         });
         setFormErrors({
             name: "",
             lastname: "",
             email: "",
+            message: "",
         });
     };
     return (
@@ -81,7 +90,7 @@ export default function Contacts() {
                                             className="py-3 px-2 border border-solid border-[#13120033] outline-none w-full rounded-[8px] mt-2"
                                         />
                                         {formErrors.name && (
-                                            <p className="font-normal text-[16px] leading-[150%] text-[#131200] opacity-70 mb-1">{formErrors.name}</p>
+                                            <p className="font-normal text-[12px] leading-[150%] text-[#fff] opacity-70 mb-1 bg-btn-gradient rounded-md  text-center mt-2 inline-block px-3 py-1">{formErrors.name}</p>
                                         )}
                                     </div>
                                     <div className="w-full">
@@ -95,7 +104,7 @@ export default function Contacts() {
                                             className="py-3 px-2 border border-solid border-[#13120033] outline-none w-full rounded-[8px] mt-2"
                                         />
                                         {formErrors.lastname && (
-                                            <p className="font-normal text-[16px] leading-[150%] text-[#131200] opacity-70 mb-1">{formErrors.lastname}</p>
+                                            <p className="font-normal text-[12px] leading-[150%] text-[#fff] opacity-70 mb-1 bg-btn-gradient rounded-md  text-center mt-2 inline-block px-3 py-1">{formErrors.lastname}</p>
                                         )}
                                     </div>
                                 </div>
@@ -110,7 +119,7 @@ export default function Contacts() {
                                         className="py-3 px-2 border border-solid border-[#13120033] outline-none w-full rounded-[8px] mt-2"
                                     />
                                     {formErrors.email && (
-                                        <p className="error-messagefont-normal text-[16px] leading-[150%] text-[#131200] opacity-70 mb-1">{formErrors.email}</p>
+                                        <p className="font-normal text-[12px] leading-[150%] text-[#fff] opacity-70 mb-1 bg-btn-gradient rounded-md  text-center mt-2 inline-block px-3 py-1">{formErrors.email}</p>
                                     )}
                                 </div>
                                 <div className="mb-4">
@@ -123,23 +132,15 @@ export default function Contacts() {
                                         onChange={handleChange}
                                         className="py-3 px-2 border border-solid border-[#13120033] outline-none w-full rounded-[8px] mt-2 max-h-[135px] resize-none"
                                         rows={5}
-                                        required
-                                    // minLength={8}
                                     />
                                     {formErrors.message && (
-                                        <p className="font-normal text-[16px] leading-[150%] text-[#131200] opacity-70 mb-1">{formErrors.message}</p>
+                                        <p className="font-normal text-[12px] leading-[150%] text-[#fff] opacity-70 mb-1 bg-btn-gradient rounded-md  text-center mt-2 inline-block px-3 py-1">{formErrors.message}</p>
                                     )}
                                 </div>
                                 <button type="submit" className="text-[16px] btn_1 font-semibold leading-[150%] text-[#FDFDFF] bg-btn-gradient py-[14px] px-6 rounded-[4px] ff_outfit">
                                     Submit
                                 </button>
                             </form>
-                            {/* {showSuccessPopup && (
-                                <div className="success-popup">
-                                    <p>Form submitted successfully!</p>
-                                    <button onClick={handlePopupClose}>Close</button>
-                                </div>
-                            )} */}
                         </div>
                     </div>
                     <div data-aos="zoom-in-left" className="lg:w-[51%] md:w-[60%] sm:w-[70%] w-[90%] flex items-center justify-center rounded-[12px] overflow-hidden lg:mt-0 sm:mt-10 mt-8">
@@ -147,6 +148,14 @@ export default function Contacts() {
                     </div>
                 </div>
             </div>
+            {showSuccessPopup && (
+                <div className="fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center backdrop-blur-sm z-40">
+                    <div className="md:p-10 p-4 border-[2px] border-solid border-[#A854E9] bg-white flex flex-col items-center justify-center gap-7 rounded-md">
+                        <p className="text-[24px] font-semibold text-[#131200] leading-[120%]">Form submitted successfully!</p>
+                        <button onClick={handlePopupClose} className="py-2 px-4 bg-btn-gradient btn_1 rounded-lg text-white text-[16px] leading-[150%] mx-auto">Close</button>
+                    </div>
+                </div>
+            )}
         </>
     )
 }

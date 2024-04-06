@@ -18,12 +18,11 @@ export default function Header() {
         }
     });
 
-
     return (
         <>
             <div className="bg-white lg:bg-[url('/assets/images/webp/hero-bg-img.webp')] lg:bg-contain lg:bg-no-repeat xl:h-[810px] lg:h-[700px] lg:bg-top relative">
                 <div className="container xl:max-w-[1164px] px-3 mx-auto">
-                    <nav className="flex items-center justify-between sm:py-[19px] py-4">
+                    <nav className="flex items-center justify-between sm:py-[19px] py-4 relative z-50">
                         <Link href={"/"}>
                             <Logo />
                         </Link>
@@ -44,8 +43,8 @@ export default function Header() {
                             <span className={`${nav ? 'rotate-[-50deg] translate-y-[-50%]' : ""} h-[3.4px] w-full duration-300 rounded-[3px] bg-[#131200] ease-linear transition-all`}></span>
                         </div>
                     </nav>
-                    <div data-aos="fade-right">
-                        <div id="home" className="xl:pt-[138px] md:pt-[90px] sm:py-[50px] py-[40px] relative z-10">
+                    <div data-aos="fade-right" className="relative z-10">
+                        <div id="home" className="xl:pt-[138px] lg:pt-[80px] md:pt-[50px] sm:pb-[50px] pb-[40px] pt-[20px]">
                             <div className="flex items-center gap-[6px] mb-2">
                                 <Stars />
                                 <p className="text-[16px] font-normal leading-[150%] text-[#131200]">AI With Noble Mind</p>
