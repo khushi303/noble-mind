@@ -94,7 +94,7 @@ export default function Contacts() {
                                         )}
                                     </div>
                                     <div className="w-full">
-                                        <label htmlFor="lastname" className="font-normal text-[16px] leading-[150%] text-[#131200] opacity-70">LastName</label>
+                                        <label htmlFor="lastname" className="font-normal text-[16px] leading-[150%] text-[#131200] opacity-70">Last Name</label>
                                         <input
                                             type="text"
                                             id="lastname"
