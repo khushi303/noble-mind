@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
     setLoading(false);
     setTimeout(() => {
       setLoading(true);
-    }, 3000);
+    }, 4000);
   }, []);
   useEffect(() => {
     AOS.init({

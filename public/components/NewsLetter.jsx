@@ -59,7 +59,7 @@ export default function NewsLetter() {
                             onChange={handleChange} className="sm:p-[14px] p-1 border-none outline-none bg-transparent ff_outfit text-[16px] font-semibold text-[#FDFDFF] leading-[150%] placeholder:text-[#fdfdff] placeholder:font-semibold placeholder:text-[16px] placeholder:ff_outfit w-full" />
                         <button type="submit" className="py-[14px] px-[24px] border rounded-[4px] border-solid border-[#FDFDFF] leading-[150%] text-[16px] font-semibold text-[#FDFDFF] hover:bg-[#FDFDFF] hover:text-[#9255d9] transition-all duration-300 ease-linear ">Subscribe</button>
                         {formErrors.email && (
-                            <p className="error-messagefont-normal absolute -bottom-9 left-6 text-[16px] leading-[150%] text-[#cc4646] mb-1">{formErrors.email}</p>
+                            <p className="absolute -bottom-9 left-0 font-normal text-[12px] leading-[150%] text-[#9255d9] mb-1 bg-white rounded-md  text-center mt-2 inline-block px-3 py-1">{formErrors.email}</p>
                         )}
                     </form>
 
