@@ -24,6 +24,10 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Noble Mind</title>
+        <meta
+          name="description"
+          content="Check out iPhone 12 XR Pro and iPhone 12 Pro Max. Visit your local store and for expert advice."
+        />
       </Head>
       {loading ? (
         <div className='overflow-hidden'>
