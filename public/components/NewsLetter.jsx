@@ -50,19 +50,18 @@ export default function NewsLetter() {
                     <h3 className='sm:text-[48px] text-[30px] leading-[120%] font-light text-[#FDFDFF] ff_outfit text-center mb-2'>Subscribe to our <span className='font-semibold'>Newsletter!</span></h3>
                     <p className="text-[16px] font-normal leading-[150%] text-center text-[#FDFDFF]">Be the first to get exclusive offers and the latest news.</p>
 
-                    <form onSubmit={handleSubmit} className="bg-[#FFFFFF0D] border border-solid border-[#FDFDFF33] max-w-[448px] w-full mx-auto lg:mt-[36px] mt-[24px] p-[10px] rounded-md flex items-center relative">
+                    <form onSubmit={handleSubmit} className="bg-[#FFFFFF0D] border border-solid border-[#FDFDFF33] max-w-[448px] w-full mx-auto lg:mt-[36px] mt-[24px] sm:p-[10px] p-2 rounded-md flex items-center relative">
                         <input type="email"
                             id="email"
                             name="email"
                             value={formData.email}
                             placeholder="Enter your email"
-                            onChange={handleChange} className="sm:p-[14px] p-1 border-none outline-none bg-transparent ff_outfit text-[16px] font-semibold text-[#FDFDFF] leading-[150%] placeholder:text-[#fdfdff] placeholder:font-semibold placeholder:text-[16px] placeholder:ff_outfit w-full" />
-                        <button type="submit" className="py-[14px] px-[24px] border rounded-[4px] border-solid border-[#FDFDFF] leading-[150%] text-[16px] font-semibold text-[#FDFDFF] hover:bg-[#FDFDFF] hover:text-[#9255d9] transition-all duration-300 ease-linear ">Subscribe</button>
+                            onChange={handleChange} className="sm:p-[14px] border-none outline-none bg-transparent ff_outfit text-[16px] font-semibold text-[#FDFDFF] leading-[150%] placeholder:text-[#fdfdff] placeholder:font-semibold placeholder:text-[16px] placeholder:ff_outfit w-full" />
+                        <button type="submit" className="sm:py-[14px] py-[10px] sm:px-[24px] px-5 border rounded-[4px] border-solid border-[#FDFDFF] leading-[150%] text-[16px] font-semibold text-[#FDFDFF] hover:bg-[#FDFDFF] hover:text-[#9255d9] transition-all duration-300 ease-linear ">Subscribe</button>
                         {formErrors.email && (
                             <p className="absolute -bottom-9 left-0 font-normal text-[12px] leading-[150%] text-[#9255d9] mb-1 bg-white rounded-md  text-center mt-2 inline-block px-3 py-1">{formErrors.email}</p>
                         )}
                     </form>
-
                 </div>
             </div>
             {showSuccessPopup && (
