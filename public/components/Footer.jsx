@@ -54,7 +54,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="border-t border-solid border-[#FFFFFF4D] py-4">
+            <div className="border-t border-solid border-[#FFFFFF4D] pt-4 sm:pb-9 pb-4">
                 <p className="text-[14px] font-normal leading-[150%] text-white opacity-70 text-center md:px-0 px-3">© Copyright {date.getFullYear()} Noble Mind | All rights reserved. </p>
             </div>
         </div>
